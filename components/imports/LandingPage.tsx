@@ -1786,7 +1786,7 @@ function Row() {
   return (
     <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Row">
       <p className="font-['DM_Sans:Medium',sans-serif] font-medium leading-[20px] relative shrink-0 text-[#ecedee] text-[14px] text-nowrap tracking-[0.07px]" style={{ fontVariationSettings: "'opsz' 14" }}>
-        Realised by Right Tail Corp.
+        Realised by Right Tail Corp.
       </p>
       <FooterLinks />
     </div>
@@ -1821,13 +1821,13 @@ function Header5() {
 
 export default function LandingPage() {
   return (
-    <div className="bg-[#1c1c1c] content-stretch flex flex-col items-start relative size-full" data-name="Landing Page">
+    <div className="bg-[#1c1c1c] content-stretch flex flex-col items-center relative size-full" data-name="Landing Page">
       <Frame26 />
       <Frame27 />
       <Frame30 />
       <Frame20 />
       <Header />
-      <div className="absolute flex h-[294.647px] items-center justify-center left-[248.07px] top-[2924.13px] w-[340.172px]" style={{ "--transform-inner-width": "0", "--transform-inner-height": "0" } as React.CSSProperties}>
+      <div className="absolute flex h-[294.647px] items-center justify-center left-1/2 -translate-x-1/2 top-[2924.13px] w-[340.172px]" style={{ "--transform-inner-width": "0", "--transform-inner-height": "0" } as React.CSSProperties}>
         <div className="flex-none rotate-[323.369deg]">
           <div className="h-[116.274px] relative w-[337.443px]" data-name="Vector">
             <div className="absolute inset-[-337.56%_-116.32%]">
