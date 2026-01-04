@@ -1,5 +1,41 @@
-import LandingPage from "@/components/imports/LandingPage";
+// app/page.tsx - Updated responsive version
+"use client";
 
-export default function Home() {
-  return <LandingPage />;
+import { useState, useEffect } from "react";
+import DesktopView from "@/components/responsive/DesktopView";
+import MobileView from "@/components/responsive/MobileView";
+import TabletView from "@/components/responsive/TabletView";
+
+export default function LandingPage() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 768);
+      setIsTablet(width >= 768 && width < 1024);
+    };
+
+    // Initial check
+    checkScreenSize();
+
+    // Add event listener
+    window.addEventListener("resize", checkScreenSize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  return (
+    <div className="bg-[#1c1c1c] min-h-screen">
+      {isMobile ? (
+        <MobileView />
+      ) : isTablet ? (
+        <TabletView />
+      ) : (
+        <DesktopView />
+      )}
+    </div>
+  );
 }
