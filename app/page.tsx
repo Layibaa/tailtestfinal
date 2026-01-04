@@ -3,18 +3,15 @@
 
 import { useState, useEffect } from "react";
 import DesktopView from "@/components/responsive/DesktopView";
-import MobileView from "@/components/responsive/MobileView";
-import TabletView from "@/components/responsive/TabletView";
+import MobileView from "@/components/responsive/MobileView"; 
 
 export default function LandingPage() {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
+  const [isMobile, setIsMobile] = useState(false); 
 
   useEffect(() => {
     const checkScreenSize = () => {
       const width = window.innerWidth;
-      setIsMobile(width < 768);
-      setIsTablet(width >= 768 && width < 1024);
+      setIsMobile(width < 768); 
     };
 
     // Initial check
@@ -31,8 +28,6 @@ export default function LandingPage() {
     <div className="bg-[#1c1c1c] min-h-screen">
       {isMobile ? (
         <MobileView />
-      ) : isTablet ? (
-        <TabletView />
       ) : (
         <DesktopView />
       )}
